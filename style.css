@@ -16,7 +16,7 @@
 
     /* Hero background image */
     .hero-section {
-      background-image: url('your-image-path.png'); /* Ganti dengan path gambar Anda */
+      background-image: url('./asset/slide_1.jpg'); /* Ganti dengan path gambar Anda */
       background-size: cover;
       background-position: center;
     }
