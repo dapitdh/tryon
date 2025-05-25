@@ -10,20 +10,45 @@
   </head>
   <body class="bg-[#F5EEDD]">
     <!-- Hero Section -->
-    <section class="hero-section">
-      <div class="hero-bg"></div>
+    <section
+      class="hero-section relative min-h-screen flex items-center justify-center"
+    >
+      <div class="hero-bg absolute inset-0 z-0"></div>
       <!-- Ini hanya untuk background -->
-      <div class="overlay-content text-center py-24 px-4">
-        <h1 class="text-5xl font-bold text-white mb-4">Welcome to Try On</h1>
-        <p class="text-xl italic text-white mb-8">Your Outfit, Your Own Way</p>
-        <p class="text-lg text-white mb-8">
+      <div
+        class="overlay-content relative z-10 text-center px-4 py-16 md:py-24 max-w-xl mx-auto"
+      >
+        <h1
+          class="text-3xl md:text-5xl font-bold text-white mb-4 leading-tight"
+        >
+          Welcome to Try On
+        </h1>
+        <p class="text-lg md:text-xl italic text-white mb-4">
+          Your Outfit, Your Own Way
+        </p>
+        <p class="text-base md:text-lg text-white mb-8">
           A third-party application that lets you try on clothes virtually using
           your camera.
         </p>
-        <div class="space-x-4">
-          <a href="#" class="btn px-6 py-3 bg-[#7AE2CF] text-[#06202B] rounded-lg font-semibold hover:bg-[#077A7D]">Kunjungi Try On A</a>
-          <a href="#" class="btn px-6 py-3 bg-[#7AE2CF] text-[#06202B] rounded-lg font-semibold hover:bg-[#077A7D]">Kunjungi Try On B</a>
-          <a href="#" class="btn px-6 py-3 bg-[#7AE2CF] text-[#06202B] rounded-lg font-semibold hover:bg-[#077A7D]">Kunjungi Try On C</a>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a
+            href="#"
+            class="btn px-6 py-3 bg-[#7AE2CF] text-[#06202B] rounded-lg font-semibold hover:bg-[#077A7D]"
+          >
+            POV Buyer
+          </a>
+          <a
+            href="#"
+            class="btn px-6 py-3 bg-[#7AE2CF] text-[#06202B] rounded-lg font-semibold hover:bg-[#077A7D]"
+          >
+            POV Seller
+          </a>
+          <a
+            href="#"
+            class="btn px-6 py-3 bg-[#7AE2CF] text-[#06202B] rounded-lg font-semibold hover:bg-[#077A7D]"
+          >
+            POV CS
+          </a>
         </div>
       </div>
     </section>
