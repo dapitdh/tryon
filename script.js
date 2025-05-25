@@ -14,7 +14,12 @@ function changeBackground() {
     index = (index + 1) % images.length;
     bgDiv.style.backgroundImage = `url('${images[index]}')`;
     bgDiv.classList.remove("fade-out");
+
+    // 🔄 Reset animasi zoomOut
+    bgDiv.style.animation = "none"; // Hapus dulu
+    void bgDiv.offsetWidth;         // Trigger reflow agar animasi bisa dijalankan ulang
+    bgDiv.style.animation = "zoomOut 5s ease-in-out forwards"; // Set ulang
   }, 1000);
 }
 
-setInterval(changeBackground, 7500);
+setInterval(changeBackground, 5000);
