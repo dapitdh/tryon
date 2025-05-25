@@ -1,22 +1,23 @@
- /* Animasi Fade & Slide dari bawah */
-    @keyframes fadeSlideIn {
-      0% {
-        opacity: 0;
-        transform: translateY(50px);
-      }
-      100% {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
+/* Animasi Fade & Slide dari bawah */
+@keyframes fadeSlideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
-    .fade-slide-in {
-      animation: fadeSlideIn 1s ease-out forwards;
-    }
+.fade-slide-in {
+  animation: fadeSlideIn 1s ease-out forwards;
+}
 
-    /* Hero background image */
-    .hero-section {
-      background-image: url('./asset/slide_1.jpg'); /* Ganti dengan path gambar Anda */
-      background-size: cover;
-      background-position: center;
-    }
+/* Hero background (default image shown first) */
+.hero-section {
+  background-image: url('./asset/slide_1.jpg');
+  background-size: cover;
+  background-position: center;
+  transition: background-image 1s ease-in-out;
+}
