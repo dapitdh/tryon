@@ -10,10 +10,12 @@
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
+  background-image: url('./asset/slide_1.webp');
   z-index: 0;
+  will-change: background-image, transform, opacity;
   transition: opacity 1s ease-in-out;
   opacity: 1;
-  animation: zoomOut 5s ease-in-out forwards;
+  transform: translateZ(0)
 }
 
 .hero-bg.fade-out {
@@ -50,4 +52,19 @@
   100% {
     transform: scale(1);
   }
+}
+
+@keyframes fadeSlideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-slide-in {
+  animation: fadeSlideIn 1s ease-out forwards;
 }
