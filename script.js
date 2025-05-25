@@ -1,15 +1,20 @@
-const heroSection = document.getElementById("hero");
-const slides = [
+const bgDiv = document.querySelector(".hero-bg");
+const images = [
   "./asset/slide_1.jpg",
   "./asset/slide_2.jpg",
   "./asset/slide_3.jpg"
 ];
-let currentSlide = 0;
 
-function changeSlide() {
-  currentSlide = (currentSlide + 1) % slides.length;
-  heroSection.style.backgroundImage = `url('${slides[currentSlide]}')`;
+let index = 0;
+
+function changeBackground() {
+  bgDiv.classList.add("fade-out");
+
+  setTimeout(() => {
+    index = (index + 1) % images.length;
+    bgDiv.style.backgroundImage = `url('${images[index]}')`;
+    bgDiv.classList.remove("fade-out");
+  }, 1000);
 }
 
-// Ganti slide setiap 3 detik
-setInterval(changeSlide, 5000);
+setInterval(changeBackground, 7500);

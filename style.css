@@ -1,23 +1,43 @@
-/* Animasi Fade & Slide dari bawah */
-@keyframes fadeSlideIn {
-  0% {
-    opacity: 0;
-    transform: translateY(50px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.fade-slide-in {
-  animation: fadeSlideIn 1s ease-out forwards;
-}
-
-/* Hero background (default image shown first) */
 .hero-section {
-  background-image: url('./asset/slide_1.jpg');
+  position: relative;
+  height: 75vh;
+  overflow: hidden;
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
   background-size: cover;
-  background-position: center;
-  transition: background-image 1s ease-in-out;
+  background-position: center center;
+  background-repeat: no-repeat;
+  z-index: 0;
+  transition: opacity 1s ease-in-out;
+  opacity: 1;
+}
+
+.hero-bg.fade-out {
+  opacity: 0;
+}
+
+.overlay-content {
+  position: relative;
+  z-index: 1;
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
